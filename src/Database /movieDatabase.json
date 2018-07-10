@@ -1,19 +1,22 @@
 {
     "movies": [
         {
-        "name": "Test Name",
+        "title": "Test Name",
         "plot": "Test Plot Summary",
-        "duration": "0 minutes"
+        "duration": "0 minutes",
+        "watched": false
         },
         {
-        "name": "Test Name 2",
+        "title": "Test Name 2",
         "plot": "Test Plot Summary 2",
-        "duration": "0 minutes"
+        "duration": "0 minutes",
+        "watched": false
         },
         {
-        "name": "Test Name 3",
+        "title": "Test Name 3",
         "plot": "Test Plot Summary 3",
-        "duration": "0 minutes"
+        "duration": "0 minutes",
+        "watched": false
         }
     ]
 }
