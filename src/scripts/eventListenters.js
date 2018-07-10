@@ -5,5 +5,6 @@ const clear = require("./clear")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
-    if (event.target.id === "addMovieButton") {
+    if (event.target.id === "addMovieButton")
         clear();
+    })
