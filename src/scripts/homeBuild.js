@@ -10,7 +10,7 @@ const mainMovieDashboard = Object.create({}, {
 
             const $dashboardHeader = $("<h1>").attr("id", "dashboardHeader").text("Movie Dashboard").appendTo($mainPageDiv);
 
-            const $addButton = $("<button>").attr("type", "button").text("Add Novie").attr("id", "addMovieButton").appendTo($mainPageDiv);
+            const $addButton = $("<button>").attr("type", "button").text("Add Movie").attr("id", "addMovieButton").appendTo($mainPageDiv);
 
             const $contentContainerDiv = $("<div>").attr("id", "contentContainerDiv").appendTo($mainPageDiv);
 
