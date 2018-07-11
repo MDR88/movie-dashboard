@@ -21,7 +21,7 @@ const newMovieForm = Object.create({}, {
 
                 const $newMovieDurationInput = $("<input>").attr("id", "form--duration").appendTo($newMovieDurationLabel)
 
-                const $newMovieSave = $("<button>").attr("id", "form--Save").text("Save").appendTo($newMovieDiv)
+                const $newMovieSave = $("<button>").attr("id", "form--save").text("Save").appendTo($newMovieDiv)
 
             }
 

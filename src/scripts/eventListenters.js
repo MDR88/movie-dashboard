@@ -4,10 +4,17 @@ const mainMovieDashboard = require("./homeBuild");
 const clear = require("./clear")
 const moviesToDOM = require("./allMoviesDOM")
 const newMovieForm = require("./movieForm")
+const saveMovie = require("./saveMovie")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
-    if (event.target.id === "add-movie-button")
+    if (event.target.id === "add-movie-button") {
         clear();
         newMovieForm.buildNewMovieForm();
-    })
+    } else if (event.target.id === "form--save") {
+        saveMovie.passMoviesToDatavase();
+        clear;
+        mainMovieDashboard.buildDashboard();
+        moviesToDOM.passMovies()
+    }
+})
