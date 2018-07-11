@@ -16,5 +16,5 @@ body.addEventListener("click", () => {
         clear();
         mainMovieDashboard.buildDashboard();
         moviesToDOM.passMovies()
-    }
+    } else if (event.targert.id === "checkbox-watched") {}
 })
