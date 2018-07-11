@@ -4,7 +4,6 @@ const databaseMethods = require("./databaseMethods")
 const moviesToDOM = Object.create({}, {
     passMovies: {
         value: () => {
-            console.log("hello")
             databaseMethods.getAllMovies().then((responseMoviesArray) => {
                 console.log(responseMoviesArray);
                 responseMoviesArray.forEach(element => {
@@ -19,10 +18,9 @@ const moviesToDOM = Object.create({}, {
 
                     const $checkBOX = $("<input>").attr("id", "checkbox-watched").attr("type", "checkbox").val(`${element.watched}`).appendTo($movieRef)
 
-                    const $secRef = document.getElementById("ContentSection")
+                    const $sectionData = document.getElementById("content-section")
 
-                    $movieRef.appendTo($secRef)
-
+                    $movieRef.appendTo($sectionData)
                     console.log(responseMoviesArray);
                 })
             })

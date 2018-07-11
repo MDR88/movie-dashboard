@@ -6,6 +6,6 @@ const moviesToDOM = require("./allMoviesDOM")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
-    if (event.target.id === "addMovieButton")
+    if (event.target.id === "add-movie-button")
         clear();
     })
