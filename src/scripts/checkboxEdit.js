@@ -1,15 +1,20 @@
 const $ = require("jquery");
 const databaseMethods = require("./databaseMethods");
-const mainMovieDashboard = require("./homeBuild");
-const clear = require("./clear")
-const moviesToDOM = require("./allMoviesDOM")
-const newMovieForm = require("./movieForm")
-const saveMovie = require("./saveMovie")
 
 const checkboxEdit = Object.create({}, {
-    checkboxChangeValue: {
-        value: () => {
-            $("#checkbox-watched").prop("checked", true);
+  checkboxChangeValue: {
+    value: () => {
+      $("#checkbox-watched").val(this.checked);
+      $("#checkbox-watched").change(function () {
+        if (this.checked) {
+          var returnVal = confirm("Are you sure?");
+          $(this).prop("checked", returnVal);
         }
+        $("#checkbox-watched").val(this.checked);
+        databaseMethods.deleteMovie();
+      })
     }
+  }
 })
+
+module.exports = checkboxEdit

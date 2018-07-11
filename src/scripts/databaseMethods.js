@@ -15,6 +15,14 @@ const databaseMethods = Object.create({}, {
             return $.ajax("http://localhost:3000/movies")
         }
     },
+    deleteMovie: {
+        value: (id) => {
+            return $.ajax({
+                url: `http://localhost:3000/movies/${id}`,
+                method: "DELETE"
+            })
+        }
+    }
 })
 
 module.exports = databaseMethods;

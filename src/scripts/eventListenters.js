@@ -5,6 +5,7 @@ const clear = require("./clear")
 const moviesToDOM = require("./allMoviesDOM")
 const newMovieForm = require("./movieForm")
 const saveMovie = require("./saveMovie")
+const checkboxEdit = require("./checkboxEdit")
 
 const body = document.querySelector("body");
 body.addEventListener("click", () => {
@@ -16,5 +17,10 @@ body.addEventListener("click", () => {
         clear();
         mainMovieDashboard.buildDashboard();
         moviesToDOM.passMovies()
-    } else if (event.targert.id === "checkbox-watched") {}
+    } else if (event.targert.id === "checkbox-watched") {
+        checkboxEdit.checkboxChangeValue();
+        clear();
+        mainMovieDashboard.buildDashboard();
+        moviesToDOM.passMovies();
+    }
 })
