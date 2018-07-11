@@ -1,5 +1,5 @@
 const $ = require("jquery")
-const databaseMethod = require("./databaseMethods")
+const databaseMethods = require("./databaseMethods")
 
 const saveMovie = Object.create({}, {
     passMovieToDatabase: {
@@ -17,7 +17,7 @@ const saveMovie = Object.create({}, {
                 watched: false
             }
 
-            databaseMethod.addArticles(newMovie)
+            databaseMethods.postMovie(newMovie)
         }
     }
 })

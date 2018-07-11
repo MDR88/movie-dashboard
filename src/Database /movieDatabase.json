@@ -1,22 +1,32 @@
 {
-    "movies": [
-        {
-        "title": "Test Name",
-        "plot": "Test Plot Summary",
-        "duration": "0 minutes",
-        "watched": false
-        },
-        {
-        "title": "Test Name 2",
-        "plot": "Test Plot Summary 2",
-        "duration": "0 minutes",
-        "watched": false
-        },
-        {
-        "title": "Test Name 3",
-        "plot": "Test Plot Summary 3",
-        "duration": "0 minutes",
-        "watched": false
-        }
-    ]
+  "movies": [
+    {
+      "title": "Test Name",
+      "plot": "Test Plot Summary",
+      "duration": "0 minutes",
+      "watched": false,
+      "id": 1
+    },
+    {
+      "title": "Test Name 2",
+      "plot": "Test Plot Summary 2",
+      "duration": "0 minutes",
+      "watched": false,
+      "id": 2
+    },
+    {
+      "title": "Test Name 3",
+      "plot": "Test Plot Summary 3",
+      "duration": "0 minutes",
+      "watched": false,
+      "id": 3
+    },
+    {
+      "title": "The Fountain",
+      "plot": "Three stories - one each from the past, present, and future - about men in pursuit of eternity with their love. A conquistador in Mayan country searches for the tree of life to free his captive queen; a medical researcher, working with various trees, looks for a cure that will save his dying wife; a space traveler, traveling with an aged tree encapsulated within a bubble, moves toward a dying star that's wrapped in a nebula; he seeks eternity with his love. The stories intersect and parallel; the quests fail and succeed.",
+      "duration": "1 hour 36 minutes",
+      "watched": "false",
+      "id": 4
+    }
+  ]
 }

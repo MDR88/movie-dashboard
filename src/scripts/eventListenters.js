@@ -12,8 +12,8 @@ body.addEventListener("click", () => {
         clear();
         newMovieForm.buildNewMovieForm();
     } else if (event.target.id === "form--save") {
-        saveMovie.passMoviesToDatavase();
-        clear;
+        saveMovie.passMovieToDatabase();
+        clear();
         mainMovieDashboard.buildDashboard();
         moviesToDOM.passMovies()
     }
