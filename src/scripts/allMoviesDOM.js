@@ -1,30 +1,46 @@
-const $ = require("jquery")
-const databaseMethods = require("./databaseMethods")
+const $ = require("jquery");
+const databaseMethods = require("./databaseMethods");
 
-const moviesToDOM = Object.create({}, {
+const moviesToDOM = Object.create(
+  {},
+  {
     passMovies: {
-        value: () => {
-            databaseMethods.getAllMovies().then((responseMoviesArray) => {
-                console.log(responseMoviesArray);
-                responseMoviesArray.forEach(element => {
-                    console.log(element)
-                    const $movieRef = $("<article>").addClass("savedMovie").attr("id", `${element.id}`)
+      value: () => {
+        databaseMethods.getAllMovies().then(responseMoviesArray => {
+          console.log(responseMoviesArray);
+          responseMoviesArray.forEach(element => {
+            console.log(element);
 
-                    const $paraMovieTitle = $("<p>").text(`${element.title}`).appendTo($movieRef)
+            const $movieCard = $("<article>")
+              .addClass("movie-card")
+              .attr("id", `${element.id}`);
 
-                    const $paraMoviePlot = $("<p>").text(`${element.plot}`).appendTo($paraMovieTitle)
+            const $paraMovieTitle = $("<p>")
+              .text(`${element.title}`)
+              .appendTo($movieCard);
 
-                    const $paraMovieDuration = $("<p>").text(`${element.duration}`).appendTo($paraMoviePlot)
+            const $paraMoviePlot = $("<p>")
+              .text(`${element.plot}`)
+              .appendTo($paraMovieTitle);
 
-                    const $checkBOX = $("<input>").attr("id", "checkbox-watched").attr("type", "checkbox").val(`${element.watched}`).appendTo($movieRef)
+            const $paraMovieDuration = $("<p>")
+              .text(`${element.duration}`)
+              .appendTo($paraMoviePlot);
 
-                    const $sectionData = document.getElementById("content-section")
+            const $checkBOX = $("<input>")
+              .attr("id", "checkbox-watched")
+              .attr("type", "checkbox")
+              .val(`${element.watched}`)
+              .appendTo($movieCard);
 
-                    $movieRef.appendTo($sectionData)
-                    console.log(responseMoviesArray);
-                })
-            })
-        }
+            const $sectionData = document.getElementById("content-section");
+
+            $movieCard.appendTo($sectionData);
+            console.log(responseMoviesArray);
+          });
+        });
+      }
     }
-})
+  }
+);
 module.exports = moviesToDOM;
