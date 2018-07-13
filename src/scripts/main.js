@@ -5,6 +5,3 @@ const databaseMethods = require("./databaseMethods");
 
 mainMovieDashboard.buildDashboard();
 moviesToDOM.passMovies();
-$("div--container").on("click", `${element.title}`, () => {
-  databaseMethods.getMovie(event.target.parentNode.id);
-});

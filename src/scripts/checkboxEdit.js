@@ -6,11 +6,12 @@ const checkboxEdit = Object.create(
   {
     checkboxChangeValue: {
       value: () => {
-        databaseMethods.editAMovie();
+        const $newMovieTitleValue = document
+          .getElementById("checkbox-watched")
+          .val();
         $("#checkbox-watched").val(this.checked);
         $("#checkbox-watched").change(function() {
           if (this.checked) {
-            var returnVal = confirm("Are you sure?");
             $(this).prop("checked", returnVal);
           }
           $("#checkbox-watched").val(this.checked);

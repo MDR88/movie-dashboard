@@ -27,10 +27,21 @@ const moviesToDOM = Object.create(
               .text(`${element.duration}`)
               .appendTo($paraMoviePlot);
 
+            const $checkBOXlabel = $("<label>")
+              .attr("for", "checkbox-watched")
+              .text("Watched")
+              .appendTo($paraMovieDuration);
+
             const $checkBOX = $("<input>")
               .attr("id", "checkbox-watched")
               .attr("type", "checkbox")
               .val(`${element.watched}`)
+              .appendTo($movieCard);
+
+            const $buttonDelete = $("<button>")
+              .attr("type", "button")
+              .text("Delete Movie")
+              .attr("id", "delete-button")
               .appendTo($movieCard);
 
             const $sectionData = document.getElementById("content-section");
