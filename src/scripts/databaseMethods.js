@@ -25,7 +25,7 @@ const databaseMethods = Object.create(
         });
       }
     },
-    putMovie: {
+    editAMovie: {
       value: editMovie => {
         return $.ajax({
           url: `http://localhost:3000/movies/${editMovie.id}`,
@@ -45,6 +45,17 @@ const databaseMethods = Object.create(
         return $.ajax({
           url: `http://localhost:3000/movies/${id}`,
           method: "DELETE"
+        });
+      }
+    },
+    archiveWatchedMovies: {
+      value: id => {
+        return $.ajax({
+          url: `http://localhost:3000/movies/${id}`,
+          method: "PATCH",
+          data: {
+            watched: true
+          }
         });
       }
     }
