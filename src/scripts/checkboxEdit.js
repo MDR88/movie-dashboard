@@ -6,15 +6,15 @@ const checkboxEdit = Object.create(
   {
     checkboxChangeValue: {
       value: () => {
-        const $newMovieTitleValue = document
-          .getElementById("checkbox-watched")
-          .val();
-        $("#checkbox-watched").val(this.checked);
-        $("#checkbox-watched").change(function() {
+        const $watchedValue = document.getElementsByClassName(
+          "checkbox-watched"
+        )[0];
+        // $watchedValue.val(this.checked);
+        $watchedValue.change(function() {
           if (this.checked) {
-            $(this).prop("checked", returnVal);
+            $(this).prop("checked", "true");
           }
-          $("#checkbox-watched").val(this.checked);
+          $(".checkbox-watched").val(this.checked);
         });
         databaseMethods.archiveWatchedMovies();
       }

@@ -8,7 +8,13 @@ const databaseMethods = Object.create(
         return $.ajax({
           url: "http://localhost:3000/movies",
           method: "POST",
-          data: movies
+          data: {
+            title: movies.title,
+            plot: movies.plot,
+            duration: movies.duration,
+            watched: false,
+            id: movies.id
+          }
         });
       }
     },
@@ -49,9 +55,9 @@ const databaseMethods = Object.create(
       }
     },
     archiveWatchedMovies: {
-      value: id => {
+      value: movieID => {
         return $.ajax({
-          url: `http://localhost:3000/movies/${id}`,
+          url: `http://localhost:3000/movies/${movieID}`,
           method: "PATCH",
           data: {
             watched: true

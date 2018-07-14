@@ -4,21 +4,21 @@
       "title": "Test Name",
       "plot": "Test Plot Summary",
       "duration": "0 minutes",
-      "watched": false,
+      "watched": "false",
       "id": 1
     },
     {
       "title": "Test Name 2",
       "plot": "Test Plot Summary 2",
       "duration": "0 minutes",
-      "watched": false,
+      "watched": "true",
       "id": 2
     },
     {
       "title": "Test Name 3",
       "plot": "Test Plot Summary 3",
       "duration": "0 minutes",
-      "watched": false,
+      "watched": "false",
       "id": 3
     },
     {
