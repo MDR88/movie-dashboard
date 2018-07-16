@@ -20,7 +20,7 @@ const saveMovie = Object.create(
           title: $newMovieTitleValue,
           plot: $newMoviePlotValue,
           duration: $newMovieDurationValue,
-          watched: false
+          watched: "false"
         };
 
         databaseMethods.postMovie(newMovie);

@@ -12,7 +12,7 @@ const databaseMethods = Object.create(
             title: movies.title,
             plot: movies.plot,
             duration: movies.duration,
-            watched: false,
+            watched: "false",
             id: movies.id
           }
         });
@@ -53,18 +53,18 @@ const databaseMethods = Object.create(
           method: "DELETE"
         });
       }
-    },
-    archiveWatchedMovies: {
-      value: movieID => {
-        return $.ajax({
-          url: `http://localhost:3000/movies/${movieID}`,
-          method: "PATCH",
-          data: {
-            watched: true
-          }
-        });
-      }
     }
+    //   archiveWatchedMovies: {
+    //     value: movieID => {
+    //       return $.ajax({
+    //         url: `http://localhost:3000/movies/${movieID}`,
+    //         method: "PATCH",
+    //         data: {
+    //           watched: true
+    //         }
+    //       });
+    //     }
+    //   }
   }
 );
 
